@@ -1,0 +1,113 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://delacruzhome.com/funcSettings.json",
+	"type": "object",
+	"title": "The root schema",
+	"description": "The root schema comprises the entire JSON document.",
+	"default": {},
+	"examples": [
+		{
+			"IsEncrypted": false,
+			"Values": {
+				"LeslieTrackerMongoConnection": "mongodb+srv://",
+				"leslieTrackerDbName": "leslieTracker",
+				"development": true,
+				"AzureWebJobsStorage": "UseDevelopmentStorage=true",
+				"FUNCTIONS_WORKER_RUNTIME": "dotnet"
+			}
+		}
+	],
+	"required": [
+		"IsEncrypted",
+		"Values"
+	],
+	"additionalProperties": true,
+	"properties": {
+		"IsEncrypted": {
+			"$id": "#/properties/IsEncrypted",
+			"type": "boolean",
+			"title": "The IsEncrypted schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": false,
+			"examples": [
+				false
+			]
+		},
+		"Values": {
+			"$id": "#/properties/Values",
+			"type": "object",
+			"title": "The Values schema",
+			"description": "An explanation about the purpose of this instance.",
+			"default": {},
+			"examples": [
+				{
+					"LeslieTrackerMongoConnection": "mongodb+srv://",
+					"leslieTrackerDbName": "leslieTracker",
+					"development": true,
+					"AzureWebJobsStorage": "UseDevelopmentStorage=true",
+					"FUNCTIONS_WORKER_RUNTIME": "dotnet"
+				}
+			],
+			"required": [
+				"LeslieTrackerMongoConnection",
+				"leslieTrackerDbName",
+				"development",
+				"AzureWebJobsStorage",
+				"FUNCTIONS_WORKER_RUNTIME"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"LeslieTrackerMongoConnection": {
+					"$id": "#/properties/Values/properties/LeslieTrackerMongoConnection",
+					"type": "string",
+					"title": "The LeslieTrackerMongoConnection schema",
+					"description": "An explanation about the purpose of this instance.",
+					"default": "",
+					"examples": [
+						"mongodb+srv://"
+					]
+				},
+				"leslieTrackerDbName": {
+					"$id": "#/properties/Values/properties/leslieTrackerDbName",
+					"type": "string",
+					"title": "The leslieTrackerDbName schema",
+					"description": "An explanation about the purpose of this instance.",
+					"default": "",
+					"examples": [
+						"leslieTracker"
+					]
+				},
+				"development": {
+					"$id": "#/properties/Values/properties/development",
+					"type": "boolean",
+					"title": "The development schema",
+					"description": "An explanation about the purpose of this instance.",
+					"default": false,
+					"examples": [
+						true
+					]
+				},
+				"AzureWebJobsStorage": {
+					"$id": "#/properties/Values/properties/AzureWebJobsStorage",
+					"type": "string",
+					"title": "The AzureWebJobsStorage schema",
+					"description": "An explanation about the purpose of this instance.",
+					"default": "",
+					"examples": [
+						"UseDevelopmentStorage=true"
+					]
+				},
+				"FUNCTIONS_WORKER_RUNTIME": {
+					"$id": "#/properties/Values/properties/FUNCTIONS_WORKER_RUNTIME",
+					"type": "string",
+					"title": "The FUNCTIONS_WORKER_RUNTIME schema",
+					"description": "An explanation about the purpose of this instance.",
+					"default": "",
+					"examples": [
+						"dotnet"
+					]
+				}
+			}
+		}
+	}
+}
